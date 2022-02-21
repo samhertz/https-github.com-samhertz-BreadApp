@@ -9,6 +9,8 @@ import Foundation
 
 class Bread: Identifiable, Decodable {
     
+    var uuid: UUID?
+    var id: Int
     var name: String
     var brazilName: String
     var keywords: [String]

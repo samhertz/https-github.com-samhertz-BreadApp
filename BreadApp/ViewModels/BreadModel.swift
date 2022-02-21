@@ -14,7 +14,7 @@ class BreadModel: ObservableObject {
     
     init() {
         
-        // self.breads = DataService.getLocalData
+        self.breads = DataService.getLocalData()
     }
     
 }

@@ -1,6 +1,7 @@
 [{
+    "id": 1,
     "name": "Apricot Loaf",
-    "brazilName": "Pao",
+    "brazilName": "Pao de Apricot",
     "keywords": ["healthy", "natural"],
     "description": "Tasty apricot loaf",
     "ingredients": ["apricot", "sugar"],
@@ -13,15 +14,16 @@
 },
 
 {
-    "name": "Apricot Loaf",
-    "brazilName": "Pao",
-    "keywords": ["healthy", "natural"],
-    "description": "Tasty apricot loaf",
-    "ingredients": ["apricot", "sugar"],
-    "servingSize": 6,
-    "totalServings": 10,
-    "calories": 195,
-    "protein" : 9,
-    "carbohydrates": 9,
-    "cost": 14.99
+    "id": 2,
+    "name": "Banana Loaf",
+    "brazilName": "Pao de Banana",
+    "keywords": ["flavorful", "natural"],
+    "description": "Tasty Banana loaf",
+    "ingredients": ["banana", "sugar"],
+    "servingSize": 2,
+    "totalServings": 19,
+    "calories": 120,
+    "protein" : 12,
+    "carbohydrates": 19,
+    "cost": 16.99
 }]
