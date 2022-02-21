@@ -1,0 +1,27 @@
+[{
+    "name": "Apricot Loaf",
+    "brazilName": "Pao",
+    "keywords": ["healthy", "natural"],
+    "description": "Tasty apricot loaf",
+    "ingredients": ["apricot", "sugar"],
+    "servingSize": 6,
+    "totalServings": 10,
+    "calories": 195,
+    "protein" : 9,
+    "carbohydrates": 9,
+    "cost": 14.99
+},
+
+{
+    "name": "Apricot Loaf",
+    "brazilName": "Pao",
+    "keywords": ["healthy", "natural"],
+    "description": "Tasty apricot loaf",
+    "ingredients": ["apricot", "sugar"],
+    "servingSize": 6,
+    "totalServings": 10,
+    "calories": 195,
+    "protein" : 9,
+    "carbohydrates": 9,
+    "cost": 14.99
+}]
