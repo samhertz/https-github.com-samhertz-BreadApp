@@ -38,7 +38,7 @@ struct AppTabView: View {
                 .tabItem {
                     VStack {
                         Image(systemName: "cart")
-                        Text("List")
+                        Text("Cart")
                     }
                 }
                 .tag(3)

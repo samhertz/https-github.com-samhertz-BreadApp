@@ -18,6 +18,8 @@
 		88B10BD027C4020600B619E8 /* BreadListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B10BCF27C4020600B619E8 /* BreadListView.swift */; };
 		88B10BD227C4022A00B619E8 /* StoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B10BD127C4022A00B619E8 /* StoryView.swift */; };
 		88B10BD427C4035A00B619E8 /* BreadCartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B10BD327C4035A00B619E8 /* BreadCartView.swift */; };
+		88B10BD627C408A300B619E8 /* BreadHighlights.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B10BD527C408A200B619E8 /* BreadHighlights.swift */; };
+		88B10BD827C409C300B619E8 /* BreadDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B10BD727C409C300B619E8 /* BreadDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		88B10BCF27C4020600B619E8 /* BreadListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreadListView.swift; sourceTree = "<group>"; };
 		88B10BD127C4022A00B619E8 /* StoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryView.swift; sourceTree = "<group>"; };
 		88B10BD327C4035A00B619E8 /* BreadCartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreadCartView.swift; sourceTree = "<group>"; };
+		88B10BD527C408A200B619E8 /* BreadHighlights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreadHighlights.swift; sourceTree = "<group>"; };
+		88B10BD727C409C300B619E8 /* BreadDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreadDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,8 +110,10 @@
 			children = (
 				882F25BE27BF4B9B00362AD8 /* AppTabView.swift */,
 				88B10BCF27C4020600B619E8 /* BreadListView.swift */,
+				88B10BD727C409C300B619E8 /* BreadDetailView.swift */,
 				88B10BD127C4022A00B619E8 /* StoryView.swift */,
 				88B10BD327C4035A00B619E8 /* BreadCartView.swift */,
+				88B10BD527C408A200B619E8 /* BreadHighlights.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -201,12 +207,14 @@
 			files = (
 				882F25BF27BF4B9B00362AD8 /* AppTabView.swift in Sources */,
 				88B10BD427C4035A00B619E8 /* BreadCartView.swift in Sources */,
+				88B10BD827C409C300B619E8 /* BreadDetailView.swift in Sources */,
 				88B10BD027C4020600B619E8 /* BreadListView.swift in Sources */,
 				882F25CF27BF4C2900362AD8 /* Bread.swift in Sources */,
 				88B10BD227C4022A00B619E8 /* StoryView.swift in Sources */,
 				88B10BCA27C3FCFC00B619E8 /* BreadModel.swift in Sources */,
 				882F25BD27BF4B9B00362AD8 /* BreadApp.swift in Sources */,
 				88B10BCD27C3FD7200B619E8 /* DataService.swift in Sources */,
+				88B10BD627C408A300B619E8 /* BreadHighlights.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

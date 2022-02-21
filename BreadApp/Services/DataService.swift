@@ -14,7 +14,7 @@ class DataService {
         // Parse local json file
         
         // Get a URL path to the json file
-        let pathString = Bundle.main.path(forResource: "breads", ofType: "json")
+        let pathString = Bundle.main.path(forResource: "Breads", ofType: "json")
         
         //check if path string is not nil, otherwise...
         guard pathString != nil else {
@@ -34,14 +34,14 @@ class DataService {
         
             do {
             
-                let recipeData = try decoder.decode([Bread].self, from: data)
+                let breadData = try decoder.decode([Bread].self, from: data)
                 
                 // Add the unique IDs
-                for r in recipeData {
+                for r in breadData {
                     r.uuid = UUID()
                 }
                 // Return the recipes
-                return recipeData
+                return breadData
                 
                 }
             
