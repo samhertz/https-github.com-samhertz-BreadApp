@@ -16,7 +16,7 @@ struct BreadListView: View {
         NavigationView {
             
             VStack(alignment: .leading) {
-                Text("All Recipes")
+                Text("Items Made Daily")
                     .bold()
                     .padding(.top, 40)
                     .font(.largeTitle)
@@ -38,6 +38,10 @@ struct BreadListView: View {
                                         .clipped()
                                         .cornerRadius(5)
                                     VStack (alignment: .leading){
+                                        Text(b.brazilName)
+                                            .bold()
+                                            .font(.title2)
+                                            .foregroundColor(.black)
                                         Text(b.name)
                                             .bold()
                                             .foregroundColor(.black)
