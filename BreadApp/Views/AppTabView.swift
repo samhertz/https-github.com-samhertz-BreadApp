@@ -25,7 +25,7 @@ struct AppTabView: View {
                 }
                 .tag(1)
             
-            BreadListView()
+            GridView()
                 .tabItem {
                     VStack {
                         Image(systemName: "list.bullet.circle")
@@ -34,16 +34,16 @@ struct AppTabView: View {
                 }
                 .tag(2)
             
-            BreadCartView()
-                .tabItem {
-                    VStack {
-                        Image(systemName: "cart")
-                        Text("Cart")
-                    }
-                }
-                .tag(3)
+//            ProductCartView()
+//                .tabItem {
+//                    VStack {
+//                        Image(systemName: "cart")
+//                        Text("Cart")
+//                    }
+//                }
+//                .tag(3)
             
-        }.environmentObject(BreadModel())
+        }.environmentObject(ProductModel())
     }
 }
 

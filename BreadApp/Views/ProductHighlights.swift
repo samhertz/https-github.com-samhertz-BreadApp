@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct BreadHighlights: View {
+struct ProductHighlights: View {
     
     var allHighlights = ""
     
@@ -34,6 +34,6 @@ struct BreadHighlights: View {
 
 struct BreadHighlights_Previews: PreviewProvider {
     static var previews: some View {
-        BreadHighlights(highlights: ["test1", "test2"])
+        ProductHighlights(highlights: ["test1", "test2"])
     }
 }

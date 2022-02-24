@@ -8,13 +8,13 @@
 import Foundation
 import SwiftUI
 
-class BreadModel: ObservableObject {
+class ProductModel: ObservableObject {
     
-    @Published var breads = [Bread]()
+    @Published var products = [Product]()
     
     init() {
         
-        self.breads = DataService.getLocalData()
+        self.products = DataService.getLocalData()
     }
     
 }

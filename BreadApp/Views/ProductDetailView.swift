@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct BreadDetailView: View {
+struct ProductDetailView: View {
     
-    var bread:Bread
+    var product:Product
     
     var body: some View {
         
@@ -18,42 +18,42 @@ struct BreadDetailView: View {
             VStack(alignment: .leading) {
             
                 // MARK: Bread Image
-                Image(bread.name)
+                Image(product.name)
                     .resizable()
                     .scaledToFill()
                 
                 // MARK: Bread Brazilian Title
-                Text(bread.brazilName)
+                Text(product.brazilName)
                     .bold()
                     .padding(.top, 20)
                     .padding(.leading)
                     .font(.largeTitle)
                 
                 // MARK: Bread English Title
-                Text("\(bread.name)")
+                Text("\(product.name)")
                     .padding(.leading)
                     .font(.title)
                 
                 // MARK: Bread Description
-                Text("Description: \(bread.description)")
+                Text("Description: \(product.description)")
                     .padding(.leading)
                     .font(.headline)
                     .padding([.bottom,.top], 5)
                 
                 // MARK: Bread Nutrition
-                Text("Serving Size: \(bread.servingSize) Oz")
+                Text("Serving Size: \(product.servingSize) Oz")
                     .padding(.leading)
                 
-                Text("Total Servings: \(bread.totalServings)")
+                Text("Total Servings: \(product.totalServings)")
                     .padding(.leading)
                 
-                Text("Calories: \(bread.calories)")
+                Text("Calories: \(product.calories)")
                     .padding(.leading)
                 
-                Text("Carbohydrates: \(bread.carbohydrates)")
+                Text("Carbohydrates: \(product.carbohydrates)")
                     .padding(.leading)
                 
-                Text("Protein: \(bread.protein)")
+                Text("Protein: \(product.protein)")
                     .padding(.leading)
 
 
@@ -63,7 +63,7 @@ struct BreadDetailView: View {
                     .font(.headline)
                     .padding([.top], 5)
                     
-                    ForEach (bread.ingredients, id: \.self) { item in
+                    ForEach (product.ingredients, id: \.self) { item in
                         Text("• " + item)
                     }
                 }
@@ -77,8 +77,8 @@ struct BreadDetailView_Previews: PreviewProvider {
     static var previews: some View {
         //Create Dummy Recipe and pass into detail view so that we can see a preview
         
-        let model = BreadModel()
+        let model = ProductModel()
         
-        BreadDetailView(bread: model.breads[0])
+        ProductDetailView(product: model.products[0])
     }
 }

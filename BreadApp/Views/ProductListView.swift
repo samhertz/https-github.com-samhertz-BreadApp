@@ -5,11 +5,11 @@
 //  Created by Samuel Hertz on 2/21/22.
 //
 
-import SwiftUI
+/* import SwiftUI
 
-struct BreadListView: View {
+struct ProductListView: View {
     
-    @EnvironmentObject var model:BreadModel
+    @EnvironmentObject var model:ProductModel
     
     var body: some View {
         
@@ -23,10 +23,10 @@ struct BreadListView: View {
                 
                 ScrollView {
                     LazyVStack (alignment: .leading) {
-                        ForEach(model.breads) { b in
+                        ForEach(model.products) { b in
                             
                             NavigationLink {
-                                BreadDetailView(bread: b)
+                                ProductDetailView(product: b)
                             } label: {
                                 
                                 // MARK: Row item
@@ -45,7 +45,7 @@ struct BreadListView: View {
                                         Text(b.name)
                                             .bold()
                                             .foregroundColor(.black)
-                                        BreadHighlights(highlights: b.keywords)
+                                        ProductHighlights(highlights: b.keywords)
                                         
                                     }
                                     Spacer()
@@ -64,7 +64,8 @@ struct BreadListView: View {
 
 struct BreadListView_Previews: PreviewProvider {
     static var previews: some View {
-        BreadListView()
-            .environmentObject(BreadModel())
+        ProductListView()
+            .environmentObject(ProductModel())
     }
 }
+*/

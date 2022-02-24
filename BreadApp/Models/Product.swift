@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Bread: Identifiable, Decodable {
+class Product: Identifiable, Decodable {
     
     var uuid: UUID?
     var id: Int
