@@ -8,10 +8,31 @@
 import SwiftUI
 
 struct ProductCartView: View {
+    
     @EnvironmentObject var cartManager: CartManager
+    
     var body: some View {
         ScrollView {
-            Text("Your Cart is Empty")
+            
+            if cartManager.products.count > 0 {
+                ForEach(cartManager.products, id: \.uuid) { product in
+                    ProductRow(product: product)
+                }
+                
+                HStack {
+                    Text("Your cart total is")
+                    Spacer()
+                    Text("$\(String(format: "%.2f", cartManager.total))")
+                }
+                .padding()
+                
+                PaymentButton(action: {})
+                    .padding()
+            }
+            else {
+                Text("Your Cart is Empty")
+            }
+            
         }
         .navigationTitle(Text("My Cart"))
         .padding(.top)
