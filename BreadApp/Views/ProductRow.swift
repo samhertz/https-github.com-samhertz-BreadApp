@@ -30,7 +30,14 @@ struct ProductRow: View {
             }
             Spacer()
             
-            Image(systemName: "trash")
+            Image(systemName: "plus")
+                .onTapGesture {
+                    cartManager.addToCart(product: product)
+                }
+            
+            Text("1")
+            
+            Image(systemName: "minus")
                 .onTapGesture {
                     cartManager.removeFromCart(product: product)
                 }

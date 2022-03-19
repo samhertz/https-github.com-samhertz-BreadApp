@@ -28,6 +28,22 @@ struct ProductCartView: View {
                 
                 PaymentButton(action: {})
                     .padding()
+                
+                ZStack {
+                    
+                    RoundedRectangle(cornerRadius: 3)
+                        .frame(height: 40)
+                    
+                    Button {
+                        // TODO: Add Pickup Info
+                    } label: {
+                        Text("Local Pickup or Delivery")
+                            .foregroundColor(Color.white)
+                    }
+                }
+                .padding(.horizontal)
+                
+
             }
             else {
                 Text("Your Cart is Empty")

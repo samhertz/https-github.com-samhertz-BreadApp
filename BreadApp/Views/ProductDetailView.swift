@@ -18,7 +18,7 @@ struct ProductDetailView: View {
             VStack(alignment: .leading) {
             
                 // MARK: Bread Image
-                Image(product.name)
+                Image("Apricot Loaf")
                     .resizable()
                     .scaledToFill()
                 

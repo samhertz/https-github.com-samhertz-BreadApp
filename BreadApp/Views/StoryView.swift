@@ -13,44 +13,76 @@ struct StoryView: View {
     
     var body: some View {
         
-        VStack {
+        ZStack {
             
-            TabView (selection: $tabSelectionIndex){
-                Image("Bread1")
-                    .resizable()
-                    .scaledToFill()
-                    .tag(1)
-                Image("Bread2")
-                    .resizable()
-                    .scaledToFit()
-                    .tag(2)
-                Image("Bread3")
-                    .resizable()
-                    .scaledToFit()
-                    .tag(3)
-                Image("Bread4")
-                    .resizable()
-                    .scaledToFill()
-                    .tag(4)
-                Image("Bread5")
-                    .resizable()
-                    .scaledToFill()
-                    .tag(5)
-                }
-            
-                .tabViewStyle(PageTabViewStyle(indexDisplayMode: .automatic))
-                .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
-            
-            
-            Text("Pão Nosso Story")
-                .font(.title)
-            
-            ScrollView {
+            VStack {
                 
-                Text(story)
-                    .padding(.horizontal)
+                Text("Pão Nosso Story")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                
+                Text("Our Daily Bread")
+                    .font(.callout)
+                    .fontWeight(.medium)
+                
+                
+                
+                ScrollView {
+                    
+                    TabView (selection: $tabSelectionIndex){
+                        Image("Bread1")
+                            .resizable()
+                            .scaledToFill()
+                            .tag(1)
+                        Image("Bread2")
+                            .resizable()
+                            .scaledToFit()
+                            .tag(2)
+                        Image("Bread3")
+                            .resizable()
+                            .scaledToFit()
+                            .tag(3)
+                        Image("Bread4")
+                            .resizable()
+                            .scaledToFill()
+                            .tag(4)
+                        Image("Bread5")
+                            .resizable()
+                            .scaledToFill()
+                            .tag(5)
+                        }
+                    .frame(height: 250)
+                    .cornerRadius(20)
+                    .padding([.horizontal, .bottom])
+                    .tabViewStyle(PageTabViewStyle(indexDisplayMode: .automatic))
+                    .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
+                    
+                    Text(story)
+                        .font(.body)
+                        .multilineTextAlignment(.leading)
+                        .padding(.horizontal)
+                    
+                    ZStack {
+                        
+                        Rectangle()
+                            .frame(width: 300, height: 50, alignment: .center)
+                            
+                            .cornerRadius(20)
+                            .foregroundColor(Color.gray)
+                        
+                        Button {
+                            GridView()
+                        } label: {
+                            Text("Continue")
+                        }
+                        .foregroundColor(.black)
+                        .font(.title)
+
+                    }
+                }
             }
         }
+        .padding(.bottom, 17)
     }
 }
 

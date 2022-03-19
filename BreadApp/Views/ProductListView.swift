@@ -5,7 +5,7 @@
 //  Created by Samuel Hertz on 2/21/22.
 //
 
-/* import SwiftUI
+import SwiftUI
 
 struct ProductListView: View {
     
@@ -68,4 +68,4 @@ struct BreadListView_Previews: PreviewProvider {
             .environmentObject(ProductModel())
     }
 }
-*/
+
