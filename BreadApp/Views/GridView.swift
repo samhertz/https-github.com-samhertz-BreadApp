@@ -21,10 +21,15 @@ struct GridView: View {
             ScrollView {
                 
                 LazyVGrid(columns: columns, spacing: 20) {
+                    
                     ForEach(model.products, id: \.uuid) { product in
-                        ProductCard(product: product)
-                            .environmentObject(cartManager)
                         
+                        NavigationLink {
+                            ProductDetailView(product: product)
+                        } label: {
+                            ProductCard(product: product)
+                                .environmentObject(cartManager)
+                        }
                     }
                 }
                 .padding()

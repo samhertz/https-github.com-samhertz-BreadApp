@@ -23,18 +23,25 @@ struct ProductCard: View {
                 
                 VStack (alignment: .leading){
                     Text(product.name)
-                        .bold()
+                        .font(.headline)
+                        .fontWeight(.semibold)
+                        .foregroundColor(.black)
+                        .multilineTextAlignment(.leading)
+                        .lineLimit(2)
                     
                     Text("$\(String(format: "%.2f", product.cost))")
                         .font(.caption)
+                        .foregroundColor(.black)
                 }
-                .padding()
+                .padding(.horizontal)
+                .padding(.vertical, 10)
                 .frame(width: 180, alignment: .leading)
                 .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color(hue: 1.0, saturation: 0.0, brightness: 0.944)/*@END_MENU_TOKEN@*/)
                 .cornerRadius(20)
             }
             .frame(width: 180, height: 250)
-        .shadow(radius: 3)
+            .shadow(radius: 3)
+            
             
             Button {
                 cartManager.addToCart(product: product)
@@ -45,12 +52,10 @@ struct ProductCard: View {
                     .background(Color.black)
                     .cornerRadius(50)
                     .padding()
+                    
+                    
             }
-
-            
         }
-        
-        
     }
 }
 
@@ -59,7 +64,7 @@ struct ProductCard_Previews: PreviewProvider {
         
         let model = ProductModel()
         
-        ProductCard(product: model.products[0])
+        ProductCard(product: model.products[7])
             .environmentObject(CartManager())
     }
 }
