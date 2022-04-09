@@ -16,7 +16,14 @@ struct ProductCartView: View {
             
             if cartManager.products.count > 0 {
                 ForEach(cartManager.products, id: \.uuid) { product in
-                    ProductRow(product: product)
+//                    ProductRow(product: product)
+                    
+                    NavigationLink {
+                        ProductDetailView(product: product)
+                    } label: {
+                        ProductRow(product: product)
+                            .environmentObject(cartManager)
+                    }
                 }
                 
                 HStack {
@@ -26,8 +33,9 @@ struct ProductCartView: View {
                 }
                 .padding()
                 
-                PaymentButton(action: {})
-                    .padding()
+                // TODO: Apple Pay
+               // PaymentButton(action: {})
+                   // .padding()
                 
                 ZStack {
                     

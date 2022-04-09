@@ -28,12 +28,12 @@ struct ProductDetailView: View {
                     .font(.title)
                 
                 // MARK: Bread Image
-               Image("Apricot Loaf")
+                Image(product.name)
                    .resizable()
                    .scaledToFill()
                 
                 // MARK: Bread Description
-                Text("Description: \(product.description)")
+                Text("\(product.description)")
                     .font(.headline)
                     .padding([.bottom,.top], 5)
                 

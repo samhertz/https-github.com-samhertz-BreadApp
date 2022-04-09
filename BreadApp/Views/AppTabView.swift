@@ -29,7 +29,7 @@ struct AppTabView: View {
                 .tabItem {
                     VStack {
                         Image(systemName: "list.bullet.circle")
-                        Text("List")
+                        Text("Menu")
                     }
                 }
                 .tag(2)

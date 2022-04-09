@@ -14,36 +14,49 @@ struct ProductRow: View {
     
     var body: some View {
         
-        HStack(spacing: 20) {
+        HStack(spacing: 10) {
             
-            Image("Apricot Loaf")
+            Image(product.name)
                 .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 100)
+                .scaledToFill()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 100, height: 75)
                 .cornerRadius(10)
             
             VStack (alignment: .leading, spacing: 10){
                 Text(product.name)
                     .bold()
+                    .multilineTextAlignment(.leading)
+                    .lineLimit(3)
                 
                 Text("$\(String(format: "%.2f", product.cost))")
             }
             Spacer()
             
             Image(systemName: "plus")
+                .padding(.vertical)
+                .padding(.horizontal, 3)
                 .onTapGesture {
                     cartManager.addToCart(product: product)
                 }
+                
             
-            Text("1")
+            if let count = cartManager.itemCount[product.name] {
+                Text(String(count))
+            }
+                    
             
             Image(systemName: "minus")
+                .padding(.vertical)
+                .padding(.horizontal, 3)
                 .onTapGesture {
                     cartManager.removeFromCart(product: product)
                 }
+                
             
             
         }
+        .foregroundColor(.black)
         .padding(.horizontal)
         .frame(maxWidth: .infinity, alignment: .leading)
         

@@ -25,8 +25,6 @@ struct StoryView: View {
                     .font(.callout)
                     .fontWeight(.medium)
                 
-                
-                
                 ScrollView {
                     
                     TabView (selection: $tabSelectionIndex){
@@ -34,10 +32,6 @@ struct StoryView: View {
                             .resizable()
                             .scaledToFill()
                             .tag(1)
-                        Image("Bread2")
-                            .resizable()
-                            .scaledToFit()
-                            .tag(2)
                         Image("Bread3")
                             .resizable()
                             .scaledToFit()
@@ -46,10 +40,14 @@ struct StoryView: View {
                             .resizable()
                             .scaledToFill()
                             .tag(4)
-                        Image("Bread5")
+                        Image("Bread6")
                             .resizable()
-                            .scaledToFill()
-                            .tag(5)
+                            .scaledToFit()
+                            .tag(6)
+                        Image("Bread7")
+                            .resizable()
+                            .scaledToFit()
+                            .tag(7)
                         }
                     .frame(height: 250)
                     .cornerRadius(20)
@@ -57,28 +55,35 @@ struct StoryView: View {
                     .tabViewStyle(PageTabViewStyle(indexDisplayMode: .automatic))
                     .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
                     
-                    Text(story)
-                        .font(.body)
+                    Text(story1)
+                        .font(.headline)
+                        .fontWeight(.regular)
                         .multilineTextAlignment(.leading)
                         .padding(.horizontal)
                     
-                    ZStack {
-                        
-                        Rectangle()
-                            .frame(width: 300, height: 50, alignment: .center)
-                            
-                            .cornerRadius(20)
-                            .foregroundColor(Color.gray)
-                        
-                        Button {
-                            GridView()
-                        } label: {
-                            Text("Continue")
-                        }
-                        .foregroundColor(.black)
-                        .font(.title)
-
-                    }
+                    Image("Bread2")
+                        .resizable()
+                        .scaledToFit()
+                        .padding()
+                    
+                    Text(story2)
+                        .font(.headline)
+                        .fontWeight(.regular)
+                        .multilineTextAlignment(.leading)
+                        .padding(.horizontal)
+                    
+                    Image("Bread5")
+                        .resizable()
+                        .scaledToFit()
+                        .cornerRadius(20)
+                        .padding()
+                    
+                    Text(story3)
+                        .font(.headline)
+                        .fontWeight(.regular)
+                        .multilineTextAlignment(.leading)
+                        .padding(.horizontal)
+                    
                 }
             }
         }
