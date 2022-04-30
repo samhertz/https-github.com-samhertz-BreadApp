@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ProductCartView: View {
     
+    @State var NumberToMessage = 9492096477
+    
     @EnvironmentObject var cartManager: CartManager
     
     var body: some View {
@@ -44,6 +46,7 @@ struct ProductCartView: View {
                     
                     Button {
                         // TODO: Add Pickup Info
+                        sendMessage()
                     } label: {
                         Text("Local Pickup or Delivery")
                             .foregroundColor(Color.white)
@@ -60,6 +63,12 @@ struct ProductCartView: View {
         }
         .navigationTitle(Text("My Cart"))
         .padding(.top)
+    }
+    
+    func sendMessage() {
+        let sms: String = "sms:+1\(NumberToMessage)&body=Hello, I would like to order the following items! \n \nItems to Order: \n\(cartManager.itemCount) \n \nTotal: \(String(format: "%.2f", cartManager.total))"
+        let strURL: String = sms.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+        UIApplication.shared.open(URL.init(string: strURL)!, options: [:], completionHandler: nil)
     }
 }
 

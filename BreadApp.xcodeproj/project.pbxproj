@@ -64,6 +64,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		882E2A2E281D95A100483447 /* ProductViews */ = {
+			isa = PBXGroup;
+			children = (
+				88B10BD727C409C300B619E8 /* ProductDetailView.swift */,
+				886CC63227C5241E00F0F79D /* ProductCard.swift */,
+				88A1D06327C67279003071CD /* CartButton.swift */,
+				88A1D06527C673CA003071CD /* GridView.swift */,
+				88B10BD527C408A200B619E8 /* ProductHighlights.swift */,
+			);
+			path = ProductViews;
+			sourceTree = "<group>";
+		};
+		882E2A2F281D962000483447 /* CartViews */ = {
+			isa = PBXGroup;
+			children = (
+				88B10BD327C4035A00B619E8 /* ProductCartView.swift */,
+				88A1D06B27C7B566003071CD /* PaymentButton.swift */,
+				88A1D06927C7AE70003071CD /* ProductRow.swift */,
+			);
+			path = CartViews;
+			sourceTree = "<group>";
+		};
 		882F25B027BF4B9B00362AD8 = {
 			isa = PBXGroup;
 			children = (
@@ -123,16 +145,10 @@
 			isa = PBXGroup;
 			children = (
 				882F25BE27BF4B9B00362AD8 /* AppTabView.swift */,
-				88B10BCF27C4020600B619E8 /* ProductListView.swift */,
-				88B10BD727C409C300B619E8 /* ProductDetailView.swift */,
-				886CC63227C5241E00F0F79D /* ProductCard.swift */,
-				88A1D06327C67279003071CD /* CartButton.swift */,
-				88A1D06527C673CA003071CD /* GridView.swift */,
 				88B10BD127C4022A00B619E8 /* StoryView.swift */,
-				88B10BD327C4035A00B619E8 /* ProductCartView.swift */,
-				88A1D06B27C7B566003071CD /* PaymentButton.swift */,
-				88B10BD527C408A200B619E8 /* ProductHighlights.swift */,
-				88A1D06927C7AE70003071CD /* ProductRow.swift */,
+				88B10BCF27C4020600B619E8 /* ProductListView.swift */,
+				882E2A2E281D95A100483447 /* ProductViews */,
+				882E2A2F281D962000483447 /* CartViews */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -253,6 +269,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -314,6 +331,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
